@@ -1,0 +1,1 @@
+# *** DONOT import vue in components, else it will export duplicated vue instance in client
