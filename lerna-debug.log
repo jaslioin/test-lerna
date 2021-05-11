@@ -15,7 +15,7 @@
 10 silly isBehindUpstream master is behind origin/master by 0 commit(s) and ahead by 0
 11 silly hasTags
 12 verbose hasTags true
-13 silly git-describe.sync "@vue/ui@0.12.5-1-ge76c862-dirty" => {"lastTagName":"@vue/ui@0.12.5","lastVersion":"0.12.5","refCount":"1","sha":"e76c862","isDirty":true}
+13 silly git-describe.sync "@vue/ui@0.12.5-2-ged771b7" => {"lastTagName":"@vue/ui@0.12.5","lastVersion":"0.12.5","refCount":"2","sha":"ed771b7","isDirty":false}
 14 info Looking for changed packages since @vue/ui@0.12.5
 15 silly checking diff packages/test-lib-ts-jason
 16 silly found diff in packages/test-lib-ts-jason/.browserslistrc
@@ -206,14 +206,39 @@
 26 verbose filtered diff   'packages/vue-app-a/yarn.lock'
 26 verbose filtered diff ]
 27 silly checking diff packages/vue-app
-28 error Error: Command failed with exit code 128: git diff --name-only @vue/ui@0.12.5 -- packages/vue-app
-28 error fatal: 'packages/vue-app/.git' not recognized as a git repository
-28 error     at makeError (C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\lib\error.js:59:11)
-28 error     at Function.module.exports.sync (C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\index.js:186:17)
-28 error     at Object.execSync (C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\child-process\index.js:39:16)
-28 error     at diffSinceIn (C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\collect-updates\lib\make-diff-predicate.js:75:23)
-28 error     at hasDiffSinceThatIsntIgnored (C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\collect-updates\lib\make-diff-predicate.js:34:18)
-28 error     at isCandidate (C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\collect-updates\collect-updates.js:113:77)
-28 error     at C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\collect-updates\lib\collect-packages.js:24:9
-28 error     at Map.forEach (<anonymous>)
-28 error     at collectPackages (C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\collect-updates\lib\collect-packages.js:23:12)
+28 silly found diff in packages/vue-app
+29 verbose filtered diff [ 'packages/vue-app' ]
+30 verbose updated test-lib-ts-jason
+31 verbose updated test-lib-ts
+32 verbose updated test-lib
+33 verbose updated vue-app-a
+34 verbose updated vue-app
+35 verbose git-describe undefined => "@vue/ui@0.12.5-2-ged771b7"
+36 silly git-describe parsed => {"lastTagName":"@vue/ui@0.12.5","lastVersion":"0.12.5","refCount":"2","sha":"ed771b7","isDirty":false}
+37 info execute Skipping releases
+38 silly lifecycle No script for "preversion" in "root", continuing
+39 silly lifecycle No script for "preversion" in "test-lib-ts-jason", continuing
+40 silly lifecycle No script for "preversion" in "test-lib-ts", continuing
+41 silly lifecycle No script for "preversion" in "test-lib", continuing
+42 silly lifecycle No script for "preversion" in "vue-app-a", continuing
+43 silly lifecycle No script for "version" in "test-lib-ts", continuing
+44 silly lifecycle No script for "version" in "test-lib", continuing
+45 silly lifecycle No script for "version" in "test-lib-ts-jason", continuing
+46 silly lifecycle No script for "preversion" in "vue-app", continuing
+47 silly lifecycle No script for "version" in "vue-app-a", continuing
+48 silly lifecycle No script for "version" in "vue-app", continuing
+49 silly lifecycle No script for "version" in "root", continuing
+50 silly gitAdd [
+50 silly gitAdd   'packages/test-lib-ts/package.json',
+50 silly gitAdd   'packages/test-lib/package.json',
+50 silly gitAdd   'packages/test-lib-ts-jason/package.json',
+50 silly gitAdd   'packages/vue-app-a/package.json',
+50 silly gitAdd   'packages/vue-app/package.json',
+50 silly gitAdd   'packages/vue-app/package-lock.json'
+50 silly gitAdd ]
+51 error Error: Command failed with exit code 128: git add -- packages/test-lib-ts/package.json packages/test-lib/package.json packages/test-lib-ts-jason/package.json packages/vue-app-a/package.json packages/vue-app/package.json packages/vue-app/package-lock.json
+51 error fatal: Pathspec 'packages/vue-app/package.json' is in submodule 'packages/vue-app'
+51 error     at makeError (C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\lib\error.js:59:11)
+51 error     at handlePromise (C:\Users\User\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\index.js:114:26)
+51 error     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+51 error     at async Promise.all (index 0)

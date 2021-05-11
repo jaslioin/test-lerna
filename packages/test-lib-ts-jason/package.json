@@ -1,6 +1,6 @@
 {
   "name": "test-lib-ts-jason",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/test-lib-ts-one.ssr.js",
   "browser": "dist/test-lib-ts-one.esm.js",
